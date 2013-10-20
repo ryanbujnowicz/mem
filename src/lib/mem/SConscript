@@ -1,0 +1,8 @@
+import os
+Import('env')
+
+prog = env.Library('mem', Glob("*.cpp"), CPPPATH=["#inst/include"])
+
+env.Alias("install", env.Install(os.path.join(env['PREFIX'], "include", "mem"), Glob("*.h")))
+env.Alias("install", env.Install(os.path.join(env['PREFIX'], "lib"), prog))
+
