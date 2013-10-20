@@ -11,9 +11,9 @@ namespace util {
  * This is especially useful when we need to determine the base type and count of an array.
  *
  * ~~~~~~~~~~~~~~{.cpp}
- * typedef T cf::BaseType<int[5]>::Type;      // T == int
- * size_t n = cf::BaseType<int>::Count;       // n == 1
- * size_t m = cf::BaseType<int[5]>::Count;    // m == 5
+ * typedef T util::BaseType<int[5]>::Type;      // T == int
+ * size_t n = util::BaseType<int>::Count;       // n == 1
+ * size_t m = util::BaseType<int[5]>::Count;    // m == 5
  * ~~~~~~~~~~~~~~
  */
 template <class T>
